@@ -2,6 +2,10 @@ from flask import Flask
 
 api = Flask(__name__)
 
+@api.route('/')
+def index():
+    return 0
+
 @api.route('/profile')
 def my_profile():
     response_body = {
@@ -10,3 +14,4 @@ def my_profile():
     }
 
     return response_body
+
