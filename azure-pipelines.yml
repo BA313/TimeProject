@@ -1,4 +1,3 @@
-# Docker
 # Build a Docker image
 # https://docs.microsoft.com/azure/devops/pipelines/languages/docker
 
@@ -11,4 +10,8 @@ resources:
 variables:
   tag: '$(Build.BuildId)'
 
-
+steps: 
+- task: Npm@1
+  inputs:
+    command: 'install'
+    workingDir: 'C:\Workspace\TimeProject\front'
